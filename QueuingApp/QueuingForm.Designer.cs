@@ -31,7 +31,7 @@
             lblQueue = new Label();
             label2 = new Label();
             label1 = new Label();
-            btnClear = new Button();
+            btnCashier = new Button();
             SuspendLayout();
             // 
             // lblQueue
@@ -69,25 +69,24 @@
             label1.TabIndex = 5;
             label1.Text = "*Click to get a number";
             // 
-            // btnClear
+            // btnCashier
             // 
-            btnClear.Location = new Point(32, 61);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(131, 116);
-            btnClear.TabIndex = 4;
-            btnClear.Text = "Cashier";
-            btnClear.UseVisualStyleBackColor = true;
-            btnClear.Click += btnClear_Click;
+            btnCashier.Location = new Point(31, 61);
+            btnCashier.Name = "btnCashier";
+            btnCashier.Size = new Size(131, 116);
+            btnCashier.TabIndex = 8;
+            btnCashier.Text = "Cashier";
+            btnCashier.UseVisualStyleBackColor = true;
             // 
             // QueuingForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(387, 275);
+            Controls.Add(btnCashier);
             Controls.Add(lblQueue);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(btnClear);
             Name = "QueuingForm";
             Text = "QueuingForm";
             ResumeLayout(false);
@@ -99,6 +98,6 @@
         private Label lblQueue;
         private Label label2;
         private Label label1;
-        private Button btnClear;
+        private Button btnCashier;
     }
 }
