@@ -41,6 +41,7 @@
             btnRefresh.TabIndex = 0;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnNext
             // 

@@ -40,7 +40,7 @@
             lblQueue.BackColor = SystemColors.Control;
             lblQueue.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             lblQueue.ForeColor = Color.Black;
-            lblQueue.Location = new Point(255, 127);
+            lblQueue.Location = new Point(230, 104);
             lblQueue.Name = "lblQueue";
             lblQueue.Size = new Size(20, 25);
             lblQueue.TabIndex = 7;
@@ -77,6 +77,7 @@
             btnCashier.TabIndex = 8;
             btnCashier.Text = "Cashier";
             btnCashier.UseVisualStyleBackColor = true;
+            btnCashier.Click += btnCashier_Click;
             // 
             // QueuingForm
             // 
