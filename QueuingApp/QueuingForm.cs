@@ -14,10 +14,12 @@ namespace QueuingApp
     public partial class QueuingForm : Form
     {
         private CashierClass cashier;
+        private CashierWindowQueue cashierWindowQueue;
         public QueuingForm()
         {
             InitializeComponent();
             cashier = new CashierClass();
+            cashierWindowQueue = new CashierWindowQueue();
         }
 
         private void btnCashier_Click(object sender, EventArgs e)
@@ -25,6 +27,8 @@ namespace QueuingApp
             lblQueue.Text = cashier.CashierGeneratedNumber("P - ");
             CashierClass.getNumberInQueue = lblQueue.Text;
             CashierClass.CashierQueue.Enqueue(CashierClass.getNumberInQueue);
+
+            cashierWindowQueue.Show();
         }
     }
 }
