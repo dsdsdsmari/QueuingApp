@@ -35,6 +35,8 @@
             // 
             // btnRefresh
             // 
+            btnRefresh.Cursor = Cursors.Hand;
+            btnRefresh.ForeColor = Color.Black;
             btnRefresh.Location = new Point(12, 14);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(116, 31);
@@ -46,6 +48,7 @@
             // btnNext
             // 
             btnNext.BackColor = SystemColors.Control;
+            btnNext.Cursor = Cursors.Hand;
             btnNext.ForeColor = SystemColors.ControlText;
             btnNext.Location = new Point(12, 51);
             btnNext.Name = "btnNext";
@@ -68,12 +71,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(337, 261);
             Controls.Add(listCashierQueue);
             Controls.Add(btnNext);
             Controls.Add(btnRefresh);
+            ForeColor = SystemColors.ControlDarkDark;
             Name = "CashierWindowQueue";
-            Text = "CashierWindowQueueForm";
+            Text = "Queuing App";
             ResumeLayout(false);
         }
 

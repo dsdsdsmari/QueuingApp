@@ -49,7 +49,7 @@ namespace QueuingApp
             {
                 frmServing = new FrmServing();
                 frmServing.Show();
-            } 
+            }
 
             if (CashierClass.CashierQueue.Count != 0)
             {
