@@ -62,6 +62,7 @@
             listCashierQueue.Size = new Size(193, 233);
             listCashierQueue.TabIndex = 2;
             listCashierQueue.UseCompatibleStateImageBehavior = false;
+            listCashierQueue.View = View.List;
             // 
             // CashierWindowQueue
             // 

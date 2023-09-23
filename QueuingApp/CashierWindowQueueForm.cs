@@ -13,7 +13,7 @@ namespace QueuingApp
 {
     public partial class CashierWindowQueue : Form
     {
-
+        private FrmServing frmServing;
         public CashierWindowQueue()
         {
             InitializeComponent();
@@ -27,7 +27,6 @@ namespace QueuingApp
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-
             // Refresh the ListView
             DisplayCashierQueue(CashierClass.CashierQueue);
         }
@@ -46,22 +45,28 @@ namespace QueuingApp
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            if (frmServing == null || frmServing.IsDisposed)
+            {
+                frmServing = new FrmServing();
+                frmServing.Show();
+            } 
+
             if (CashierClass.CashierQueue.Count != 0)
             {
                 if (CashierClass.CashierQueue.Contains(CashierClass.CashierQueue.Peek()))
                 {
 
                     string cas = CashierClass.CashierQueue.Peek();
-                    CashierClass.CashierQueue.Peek();
+                    frmServing.lblServingNum.Text = CashierClass.CashierQueue.Peek();
 
                     CashierClass.CashierQueue.Dequeue();
                 }
             }
             else
             {
-                MessageBox.Show("No more numbers inqueue.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No more numbers in the queue.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            
+
         }
 
         private void timer1_thick_Tick(object sender, EventArgs e)
